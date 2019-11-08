@@ -63,7 +63,8 @@ public class Userinput {
 		          case "Q":
 		        	          		  
 		        	  String userEmailId= user.getEmailid();
-	                 if(userEmailId=="null"){
+		        	  //System.out.println(userEmailId);
+	                 if(userEmailId==null){
 	                	 
 	      	          System.out.println("Set Email Id");
 	      	          
