@@ -8,6 +8,7 @@ public class Userinput {
 
 	public static void main(String[] args) {
 		 String choice="";
+		 
 		 User user = new User();
 			
 	        while(true){
@@ -49,6 +50,7 @@ public class Userinput {
 	                   break;
 	                   
 		          case "E":
+		          
 		        	  System.out.println("Enter Email Id: ");
 		        	  try {
 		        		  user.setEmailid(new BufferedReader(new InputStreamReader(System.in)).readLine());
@@ -56,31 +58,42 @@ public class Userinput {
 		        	  catch (Exception e) {
 	                      System.out.println(e);
 	                  }
-	                   break;
-	                   	
+		              break;
+	                   	  
 		          case "Q":
-	                  //System.out.println(user.getEmailid());
-	                  String userEmailId= user.getEmailid();
+		        	          		  
+		        	  String userEmailId= user.getEmailid();
+	                 if(userEmailId=="null"){
+	                	 
+	      	          System.out.println("Set Email Id");
+	      	          
+                    }else {
+                    	
+                     
+	                  System.out.println(user.getEmailid());
+                    	
 		        	  int num = userEmailId.indexOf("@");
-	                  String firstPart = user.getEmailid().substring(0,num);
+	                  String firstPart = (user.getEmailid()).substring(0,num);
 	                  user.setUsername(firstPart);
 	                 
 	                  System.out.println("Username: "+user.getUsername());
 	                  System.out.println("First name: "+user.getFirstName());
 	                  System.out.println("Last Name: "+user.getLastName());
 	                  System.out.println("EmailId: "+user.getEmailid());
-	             
-	                  
+	                  System.out.println("Successful user name");
 	                  System.exit(1);
-	              default:
-	                  break;    
-	        	  
-	        	  
+	                  
+                    
+		          }
+		          default:
+		          break; 
+                   
+                    	
 	            }
 	            
 
 	        } 
-	        
+	     
 	       
 	}
 	

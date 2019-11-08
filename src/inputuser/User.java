@@ -4,7 +4,7 @@ public class User {
 
 	    private String firstName;
 	    private String lastName;
-	    private String emailid;
+	    private  String emailid;
 	    private String username;
 	    
 	    public User( String firstName, String lastName,String emailid,String username ) 
@@ -36,7 +36,7 @@ public class User {
 			this.lastName = lastName;
 		}
 
-		public String getEmailid() {
+		public  String getEmailid() {
 			return emailid;
 		}
 
