@@ -41,6 +41,7 @@ public class Userinput {
 		        	  try {
 		        		  user.setLastName(new BufferedReader(new InputStreamReader(System.in)).readLine());
 		        		  }
+		        	  
 		        	  catch (IOException e) {
 	                      System.out.println(e);
 	                  }
