@@ -9,9 +9,10 @@ public class Userinput {
 	public static void main(String[] args) {
 		 String choice="";
 		 User user = new User();
+			
 	        while(true){
 	            System.out.println("*******************");
-	            System.out.println("Enter option No.");
+	            System.out.println("Enter option .");
 	            System.out.println("F.firstName");
 	            System.out.println("L.lastNmae");  
 	            System.out.println("E.emailId");
@@ -58,11 +59,16 @@ public class Userinput {
 	                   break;
 	                   	
 		          case "Q":
-	                  System.out.println("Q.Exit");
-	                  System.out.println(user.getUsername());
-	                  System.out.println(user.getFirstName());
-	                  System.out.println(user.getLastName());
-	                  System.out.println(user.getEmailid());
+	                  //System.out.println(user.getEmailid());
+	                  String userEmailId= user.getEmailid();
+		        	  int num = userEmailId.indexOf("@");
+	                  String firstPart = user.getEmailid().substring(0,num);
+	                  user.setUsername(firstPart);
+	                 
+	                  System.out.println("Username: "+user.getUsername());
+	                  System.out.println("First name: "+user.getFirstName());
+	                  System.out.println("Last Name: "+user.getLastName());
+	                  System.out.println("EmailId: "+user.getEmailid());
 	             
 	                  
 	                  System.exit(1);
@@ -74,9 +80,8 @@ public class Userinput {
 	            
 
 	        } 
-	        //System.out.println(user.getEmailid());
-	        //int num=user.getEmailid().indexOf("@");
-        	//String firstpart=user.getEmailid().substring(0,num);
-        	//user.setUsername(firstpart);
-	}	
+	        
+	       
+	}
+	
 }
